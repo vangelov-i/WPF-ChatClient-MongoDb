@@ -11,7 +11,7 @@
             <ColumnDefinition Width="345*"/>
             <ColumnDefinition Width="211*"/>
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="tbCurrentMessage" HorizontalAlignment="Left" Height="30" Margin="0,489,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="499" TextChanged="textBox_TextChanged" Background="#FFDED6D6" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbCurrentMessage" HorizontalAlignment="Left" Height="30" Margin="0,489,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="499" Background="#FFDED6D6" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <ListBox x:Name="lbChatHistory" HorizontalAlignment="Left" Height="484" VerticalAlignment="Top" Width="547" Background="#FFBFBCBC" FontSize="16" FontWeight="Bold" Grid.ColumnSpan="2"/>
         <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Margin="159,491,0,0" VerticalAlignment="Top" Width="43" Click="btnSend_Click" Grid.Column="1">
             <Button.Background>

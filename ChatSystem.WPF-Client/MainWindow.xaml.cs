@@ -5,8 +5,7 @@
 
     using ChatSystem.Data;
     using ChatSystem.Data.Contracts;
-    using ChatSystem.Model;
-    
+
     public partial class MainWindow : Window
     {
         private readonly IChatSystemEngine chatEngine;

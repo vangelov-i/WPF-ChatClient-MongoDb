@@ -65,11 +65,12 @@
             users.Add(newUser);
         }
 
-        public IList<Message> GetMessagesWith(User recepient)
+        public IList<Message> GetMessagesWith(User recepient, int skipCount = 0)
         {
             var result = this.chatData.Messages.Search(m =>
                     (m.Sender == this.hostUser && m.Recepient == recepient)
-                    || (m.Sender == recepient && m.Recepient == this.hostUser));
+                    || (m.Sender == recepient && m.Recepient == this.hostUser),
+                    skipCount);
 
             return result;
         }

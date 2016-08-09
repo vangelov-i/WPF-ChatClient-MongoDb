@@ -11,7 +11,7 @@
 
         void RegisterUser(string username, string password);
 
-        IList<Message> GetMessagesWith(User recepient);
+        IList<Message> GetMessagesWith(User recepient, int skipCount = 0);
 
         Message SendMessage(User recepient, string content);
 

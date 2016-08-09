@@ -2,7 +2,6 @@
 {
     using System.Windows;
 
-    using ChatSystem.Data;
     using ChatSystem.Data.Contracts;
 
     public partial class ChooseUserToChatWindow : Window
@@ -38,10 +37,6 @@
             {
                 this.listBoxUsers.Items.Add(username);
             }
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
         }
     }
 }

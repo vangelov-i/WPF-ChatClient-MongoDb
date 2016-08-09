@@ -28,14 +28,15 @@
 
         public IList<T> All()
         {
+            // TODO: test if this .Skip is executing on DB level!
             var allEntities = this.collection.AsQueryable().ToList();
 
             return allEntities;
         }
 
-        public IList<T> Search(Expression<Func<T, bool>> conditions)
+        public IList<T> Search(Expression<Func<T, bool>> conditions, int skipCount = 0)
         {
-            var filteredEntities = this.collection.Find(conditions).ToList();
+            var filteredEntities = this.collection.Find(conditions).Skip(skipCount).ToList();
 
             return filteredEntities;
         }

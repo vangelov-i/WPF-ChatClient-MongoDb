@@ -11,7 +11,7 @@
     {
         IList<T> All();
 
-        IList<T> Search(Expression<Func<T, bool>> conditions);
+        IList<T> Search(Expression<Func<T, bool>> conditions, int skipCount = 0);
 
         void Add(T entity);
 
