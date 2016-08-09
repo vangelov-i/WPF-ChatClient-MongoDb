@@ -45,13 +45,18 @@
         private void UpdateListBoxHistory()
         {
             int messagesCountToSkip = this.lbChatHistory.Items.Count;
-            var messages = this.chatEngine.GetMessagesWith(this.recepient, messagesCountToSkip);
-            foreach (var message in messages)
+            var newMessages = this.chatEngine.GetMessagesWith(this.recepient, messagesCountToSkip);
+            foreach (var message in newMessages)
             {
                 this.lbChatHistory.Items.Add(message.ToString());
             }
 
-            this.ScrollListBoxToBottom();
+            // BUG: If you want to manually scroll up and stay there 
+            // it will last untill new message is delivered
+            if (newMessages.Count > 0)
+            {
+                this.ScrollListBoxToBottom();
+            }
         }
 
         private void ScrollListBoxToBottom()
