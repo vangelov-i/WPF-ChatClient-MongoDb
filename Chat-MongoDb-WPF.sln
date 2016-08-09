@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSystem.Data", "ChatSystem.Data\ChatSystem.Data.csproj", "{9147D518-DBF9-4440-B045-9E7AC2B39C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSystem.WPF-Client", "ChatSystem.WPF-Client\ChatSystem.WPF-Client.csproj", "{5B33BB18-9ED9-4A4B-A369-0AA714B91F51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSystem.Model", "ChatSystem.Model\ChatSystem.Model.csproj", "{65B28FA4-BCAB-4FBF-8B17-74754BE8F262}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSystem.Tests", "ChatSystem.Tests\ChatSystem.Tests.csproj", "{38093C5C-015C-4629-BC1B-D6934384EEA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9147D518-DBF9-4440-B045-9E7AC2B39C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9147D518-DBF9-4440-B045-9E7AC2B39C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9147D518-DBF9-4440-B045-9E7AC2B39C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9147D518-DBF9-4440-B045-9E7AC2B39C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B33BB18-9ED9-4A4B-A369-0AA714B91F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B33BB18-9ED9-4A4B-A369-0AA714B91F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B33BB18-9ED9-4A4B-A369-0AA714B91F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B33BB18-9ED9-4A4B-A369-0AA714B91F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65B28FA4-BCAB-4FBF-8B17-74754BE8F262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65B28FA4-BCAB-4FBF-8B17-74754BE8F262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65B28FA4-BCAB-4FBF-8B17-74754BE8F262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65B28FA4-BCAB-4FBF-8B17-74754BE8F262}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38093C5C-015C-4629-BC1B-D6934384EEA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38093C5C-015C-4629-BC1B-D6934384EEA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38093C5C-015C-4629-BC1B-D6934384EEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38093C5C-015C-4629-BC1B-D6934384EEA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
