@@ -1,12 +1,13 @@
 ﻿namespace ChatSystem.Data.Contracts
 {
-    using System.Collections;
     using System.Collections.Generic;
 
     using ChatSystem.Model;
 
     public interface IChatSystemEngine
     {
+        IEnumerable<string> Usernames { get; }
+
         void LogIn(string username, string password);
 
         void RegisterUser(string username, string password);
@@ -16,7 +17,5 @@
         Message SendMessage(User recepient, string content);
 
         User GetUser(string username);
-
-        IEnumerable<string> Usernames { get; }
     }
 }

@@ -1,7 +1,6 @@
 ﻿namespace ChatSystem.Data
 {
     using System;
-    using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
 
@@ -27,11 +26,9 @@
         {
             get
             {
-                return this.chatData.Users
-                    .Search(u => u.Username != this.hostUser.Username)
-                    .Select(u => u.Username);
+                return this.chatData.Users.Search(u => u.Username != this.hostUser.Username).Select(u => u.Username);
             }
-        } 
+        }
 
         public void LogIn(string username, string password)
         {
@@ -67,7 +64,9 @@
 
         public IList<Message> GetMessagesWith(User recepient, int skipCount = 0)
         {
-            var result = this.chatData.Messages.Search(m =>
+            var result =
+                this.chatData.Messages.Search(
+                    m =>
                     (m.Sender == this.hostUser && m.Recepient == recepient)
                     || (m.Sender == recepient && m.Recepient == this.hostUser),
                     skipCount);

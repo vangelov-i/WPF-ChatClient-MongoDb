@@ -13,7 +13,7 @@
     public class Repository<T> : IRepository<T> where T : IDbDocument
     {
         private readonly IMongoCollection<T> collection;
-        private readonly IChatSystemMongoDbContext context;
+        private IChatSystemMongoDbContext context;
 
         public Repository()
             : this(new ChatSystemMongoDbContext())
@@ -22,8 +22,26 @@
 
         public Repository(IChatSystemMongoDbContext chatSystemMongoDbContext)
         {
-            this.context = chatSystemMongoDbContext;
-            this.collection = this.context.GetCollection<T>();
+            this.Context = chatSystemMongoDbContext;
+            this.collection = this.Context.GetCollection<T>();
+        }
+
+        private IChatSystemMongoDbContext Context
+        {
+            get
+            {
+                return this.context;
+            }
+
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("ChatSystemMongoDbContext can not be null.");
+                }
+
+                this.context = value;
+            }
         }
 
         public IList<T> All()
@@ -53,18 +71,16 @@
 
         public bool Delete(T entity)
         {
-            var result = this.collection.DeleteOne(e => e.Id == entity.Id);
+            bool result = this.Delete(e => e.Id == entity.Id);
 
-            bool documentIsRemoved = result.DeletedCount > 0;
-
-            return documentIsRemoved;
+            return result;
         }
 
         public bool Delete(Expression<Func<T, bool>> conditions)
         {
-            var deletedDocument = this.collection.FindOneAndDelete(conditions);
+            var deleteResult = this.collection.DeleteOne(conditions);
 
-            return deletedDocument != null;
+            return deleteResult.DeletedCount > 0;
         }
     }
 }
