@@ -36,6 +36,7 @@
         {
             get
             {
+                //return new Repository<User>();
                 return this.GetRepository<User>();
             }
         }

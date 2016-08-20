@@ -9,6 +9,8 @@
 
     public class ChatSystemEngine : IChatSystemEngine
     {
+        private const int MinPasswordLength = 3;
+
         private readonly IChatSystemData chatData;
         private User hostUser;
 
@@ -46,14 +48,13 @@
             bool usernameIsAvailable = this.CheckUsernameIsAvailable(username);
             if (!usernameIsAvailable)
             {
-                throw new ArgumentException(string.Format("User with username {0} already exists.", username));
+                throw new ArgumentException($"User with username {username} already exists.");
             }
 
-            bool passwordIsValid = !string.IsNullOrEmpty(password) && password.Length >= 3;
+            bool passwordIsValid = !string.IsNullOrEmpty(password) && password.Length >= MinPasswordLength;
             if (!passwordIsValid)
             {
-                // TODO: make constat for "3" and exceptions messages 
-                throw new ArgumentException("Pasword must be at least 3 symbols long.");
+                throw new ArgumentException($"Pasword must be at least {MinPasswordLength} symbols long.");
             }
 
             var users = this.chatData.Users;

@@ -33,7 +33,6 @@ C:\Users\Iliyan\Desktop\Dropbox\Databases\Telerik\Homeworks\WPF-ChatClient-Mongo
 C:\Users\Iliyan\Desktop\Dropbox\Databases\Telerik\Homeworks\WPF-ChatClient-MongoDb\ChatSystem.Tests\bin\Debug\Castle.Core.dll
 C:\Users\Iliyan\Desktop\Dropbox\Databases\Telerik\Homeworks\WPF-ChatClient-MongoDb\ChatSystem.Tests\bin\Debug\ChatSystem.Data.dll
 C:\Users\Iliyan\Desktop\Dropbox\Databases\Telerik\Homeworks\WPF-ChatClient-MongoDb\ChatSystem.Tests\bin\Debug\ChatSystem.Model.dll
-C:\Users\Iliyan\Desktop\Dropbox\Databases\Telerik\Homeworks\WPF-ChatClient-MongoDb\ChatSystem.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Users\Iliyan\Desktop\Dropbox\Databases\Telerik\Homeworks\WPF-ChatClient-MongoDb\ChatSystem.Tests\bin\Debug\MongoDB.Bson.dll
 C:\Users\Iliyan\Desktop\Dropbox\Databases\Telerik\Homeworks\WPF-ChatClient-MongoDb\ChatSystem.Tests\bin\Debug\MongoDB.Driver.Core.dll
 C:\Users\Iliyan\Desktop\Dropbox\Databases\Telerik\Homeworks\WPF-ChatClient-MongoDb\ChatSystem.Tests\bin\Debug\MongoDB.Driver.dll
