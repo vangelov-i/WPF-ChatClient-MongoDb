@@ -1,14 +1,14 @@
 ﻿namespace ChatSystem.Data
 {
+    using System.Configuration;
     using ChatSystem.Data.Contracts;
-    using ChatSystem.Model;
 
     using MongoDB.Driver;
 
     public class ChatSystemMongoDbContext : MongoClient, IChatSystemMongoDbContext
     {
-        private const string DefaultConnection = "mongodb://Iliyan:fuck@ds145395.mlab.com:45395/iliyanschat";
         private const string DefaultDatabaseName = "iliyanschat";
+        private static readonly string DefaultConnection = ConfigurationManager.ConnectionStrings[DefaultDatabaseName].ConnectionString;
 
         private IMongoDatabase database;
 
